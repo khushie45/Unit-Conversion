@@ -11,6 +11,9 @@ let volumeId = document.getElementById("volume")
 let massId = document.getElementById("mass")
 
 convertBtn.addEventListener("click", () => {
+    lengthId.innerHTML = ""
+    volumeId.innerHTML = ""
+    massId.innerHTML = ""
     lengthFunc()
     volumeFunc()
     massFunc()
@@ -22,7 +25,7 @@ function lengthFunc() {
     feet = (length * 3.281).toFixed(3)
     //feet to meter
     meter = (length / 3.281).toFixed(3)
-    lengthId.innerHTML += `<p>${inputNumber.value} meters = ${feet} feet | ${inputNumber.value} feet = ${meter} meters</p>`
+    lengthId.innerHTML += `${inputNumber.value} meters = ${feet} feet | ${inputNumber.value} feet = ${meter} meters`
     //console.log(feet)
     //console.log(meter)
 }
@@ -33,7 +36,7 @@ function volumeFunc() {
     gallons = (volume * 0.264).toFixed(3)
     //gallons to liter
     liter = (volume / 0.264).toFixed(3)
-    volumeId.innerHTML += `<p>${inputNumber.value} liters = ${gallons} gallons | ${inputNumber.value} gallons = ${liter} liters</p>`
+    volumeId.innerHTML += `${inputNumber.value} liters = ${gallons} gallons | ${inputNumber.value} gallons = ${liter} liters`
     //console.log(gallons)
     //console.log(liter)
 }
@@ -44,7 +47,7 @@ function massFunc() {
     pounds = (mass * 2.204).toFixed(3)
     //pounds to kilos
     kilos = (mass / 2.204).toFixed(3)
-    massId.innerHTML += `<p>${inputNumber.value} kilos = ${pounds} pounds | ${inputNumber.value} pounds = ${kilos} kilos</p>`
+    massId.innerHTML += `${inputNumber.value} kilos = ${pounds} pounds | ${inputNumber.value} pounds = ${kilos} kilos`
     //console.log(pounds)
     //console.log(kilos)
 }
